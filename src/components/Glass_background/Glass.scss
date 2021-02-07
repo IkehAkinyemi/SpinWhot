@@ -1,0 +1,96 @@
+.glass {
+  display: flex;
+  background-color: white;
+  width: 90%;
+  height: 90vh;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    to right bottom, 
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.3)
+  );
+  backdrop-filter: blur(2rem);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 
+    10px 10px 10px rgba(46, 54, 68, 0.03),
+    -10px -10px 10px rgba(46, 54, 68, 0.03),
+    10px -10px 10px rgba(46, 54, 68, 0.03),
+    -10px 10px 10px rgba(46, 54, 68, 0.03);
+
+  #card-container {
+    margin: 0.7rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-rows: 100px;
+    grid-auto-rows: 100px;
+    gap: 4rem 7rem;
+    overflow-y: scroll;
+
+    .guess-modal {
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      background-color: whitesmoke;
+      z-index: 1111;
+      padding: 2rem;
+      border-radius: 0.3rem;
+    }
+
+    .learn-to-play {
+      display: none;
+      position: absolute;
+      color: rgb(36, 35, 35);
+      left: 30%;
+      right: 20%;
+      top: 9%;
+      background-color: whitesmoke;
+      background-image: url("../../assets/backgroundPatterns/crisp-paper-ruffles.png");
+      z-index: 1111;
+      padding: 2rem;
+      border-radius: 0.3rem;
+      transform: scale(0.9);
+
+      .visible {
+        display: flex;
+      }
+
+      .cancel-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        margin-left: auto;
+        padding: 13px;
+        width: 19.9px;
+        height: 19.9px;
+        border-radius: 50%;
+        background-color: rgb(228, 27, 27);
+        font-weight: bolder;
+        cursor: pointer;
+      }
+    }
+  }
+
+  /* width */
+  #card-container::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* Track */
+  #card-container::-webkit-scrollbar-track {
+    background: #f1f1f100;
+  }
+
+  /* Handle */
+  #card-container::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.788);
+  }
+
+  /* Handle on hover */
+  #card-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

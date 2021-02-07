@@ -1,0 +1,122 @@
+.dash-board {
+  background-color: rgb(212, 217, 221);
+  background-image: url("../../assets/backgroundPatterns/black-thread-light.png");
+  width: 20%;
+  height: 100%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 1px solid transparent;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+
+  .container {
+    padding: 0rem;
+    margin-right: 9px;
+    margin-left: -1.9px;
+    margin-top: 2rem;
+  }
+
+  .first-player__name, .second-player__name {
+    color: #102B3F;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    margin-top: 45px;
+  }
+
+  .first-player__score-board, .second-player__score-board {
+    font-size: 1.3rem;
+    color: rgb(230, 227, 231);
+    background-color: #6247AA;
+    padding: 0.5rem 1rem;
+    padding-right: .9rem;
+    display: flex;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+  }
+
+  .first-player__score-figure, .second-player__score-figure {
+    width: 30px;
+    height: 30px;
+    color: #102B3F;
+    background-color: rgb(230, 227, 231);
+    border-radius: 50%;
+    margin-left: auto;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .guessedImage {
+    margin: 6px 0px;
+    margin-left: 1rem;
+    width: 90px;
+    height: 90px;
+    animation: scale-up 0.5s ease-in 0s 1 forwards normal;
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    overflow-y: scroll;
+    border-radius: 0.3rem;
+    background-image: url("../../assets/backgroundPatterns/pineapple-cut.png");
+    text-align: center;
+  }
+
+  .helper {
+    transform: scale(0.8);
+    margin-top: -4px;
+    margin-bottom: 15px;
+  }
+
+  @keyframes scale-up {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .intro {
+    padding-left: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .welcome-intro {
+    margin-bottom: 16px;
+    text-decoration: underline;
+  }
+
+  .welcome-intro-summary {
+    cursor: pointer;
+  }
+
+  a {
+    color: black;
+  }
+
+  [alt="logo"] {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* width */
+.guessedImage::-webkit-scrollbar, .dash-board::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+.guessedImage::-webkit-scrollbar-track, .dash-board::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+
+/* Handle */
+.guessedImage::-webkit-scrollbar-thumb, .dash-board::-webkit-scrollbar-thumb {
+  background:rgb(153, 79, 223);
+}
+
+/* Handle on hover */
+.guessedImage::-webkit-scrollbar-thumb:hover, .dash-board::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
