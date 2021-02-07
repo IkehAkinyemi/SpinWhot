@@ -43,7 +43,7 @@ const DashBoard = (props) => {
         </div>
 
         <div className="welcome-intro hashnode-docs">
-          <a href="https://hashnode.com/draft/601f15d8636acc2a3822ed4f">Read more about SpinWhot on Hashnode</a>
+          <a href="https://ikehakinyemi.hashnode.dev/introduction-to-spinwhot-game">Read more about SpinWhot on Hashnode</a>
         </div>
       </div>
     </div>
