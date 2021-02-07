@@ -239,7 +239,7 @@ const GlassBackground = (props) => {
 
       playerTwoGameState(e);
     } else if (playerTwoGuessArr.length === 1) {
-      e = cardRefs.current[2];
+      e = cardRefs.current[randomGuess()];
       playerCurrentGuess = e.lastElementChild.firstElementChild.textContent;
 
       if (playerTwoGuessArr[0] === playerCurrentGuess) {
