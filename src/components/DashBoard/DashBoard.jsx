@@ -27,7 +27,7 @@ const DashBoard = (props) => {
         <div className="second-player container">
           <p className="second-player__name">2nd Player</p>
 
-          <FirstPickedCardContent  backCardContent={backCardContent} whichPlayerToUpdate={props.whichPlayerToUpdate}/>
+          <FirstPickedCardContent  backCardContent={backCardContent} whichPlayerToUpdate={!props.whichPlayerToUpdate}/>
 
           <p className="second-player__score-board">
             Score:{" "}
