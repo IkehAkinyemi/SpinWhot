@@ -41,14 +41,12 @@ shuffledFrontImages = shuffleImage(
 let playerTwoKit = {
   randomNumber: [],
   playerTwoscoreBoardFigure: 0,
-  playerTwoCardImgLink: [],
   playerTwoGuessArr: [],
 };
 
 let {
   randomNumber,
   playerTwoscoreBoardFigure,
-  playerTwoCardImgLink,
   playerTwoGuessArr,
 } = playerTwoKit;
 
@@ -65,7 +63,6 @@ const GlassBackground = (props) => {
   const [playerOneKit, setPlayersKits] = useState({
     playerOnescoreBoardFigure: 0,
     updatePlayerTwoScore: 0,
-    playerOneCardImgLink: [],
     playerOneGuessArr: [],
     playerCurrentGuess: "",
     currentPlayer: true,
@@ -74,7 +71,6 @@ const GlassBackground = (props) => {
   let {
     playerOnescoreBoardFigure,
     updatePlayerTwoScore,
-    playerOneCardImgLink,
     playerOneGuessArr,
     playerCurrentGuess,
     currentPlayer,
@@ -112,7 +108,6 @@ const GlassBackground = (props) => {
         e.target.closest(".flip-card-inner").id = "flip-card-inner";
         setPlayersKits((prevValue) => ({
           ...prevValue,
-          playerOneCardImgLink: [e.target.src],
           playerOneGuessArr: [
             ...prevValue.playerOneGuessArr,
             playerCurrentGuess,
@@ -123,7 +118,7 @@ const GlassBackground = (props) => {
           e.target.closest(".flip-card-inner").id = "flip-card-inner";
           setPlayersKits((prevValue) => ({
             ...prevValue,
-            playerOnescoreBoardFigure: prevValue.playerOnescoreBoardFigure + 4,
+            playerOnescoreBoardFigure: prevValue.playerOnescoreBoardFigure + 2,
             playerOneGuessArr: [],
             currentPlayer: false,
           }));
@@ -247,7 +242,7 @@ const GlassBackground = (props) => {
 
         setPlayersKits((prevValue) => ({
           ...prevValue,
-          updatePlayerTwoScore: (playerTwoscoreBoardFigure += 4),
+          updatePlayerTwoScore: (playerTwoscoreBoardFigure += 2),
           currentPlayer: true,
         }));
 
@@ -392,7 +387,7 @@ const GlassBackground = (props) => {
             the hidden cat fact behind it. After that try to guess another card with the same content as the 
             first chosen card. If guessed right you score 2 points against your opponent and the whole cards reshuffles. 
             But if you guessed wrongly you score no point at all, and wait for your next playing turn to try 
-            guessing again what card has the same hidden content as your initial chosen card. Fun right. 🤩
+            guessing again what card has the same hidden content as your initial chosen card. Fun right. <span role="img" aria-label="star-struck">🤩</span>
           </p>
             <br />
           <p>

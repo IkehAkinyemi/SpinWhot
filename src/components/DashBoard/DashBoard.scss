@@ -82,7 +82,7 @@
   }
   
   .welcome-intro {
-    margin-bottom: 16px;
+    margin-bottom: 28px;
     text-decoration: underline;
   }
 
@@ -94,9 +94,14 @@
     color: black;
   }
 
+  .logo-container {
+    margin-left: 0.3rem;
+    margin-top: 10px;
+  }
+
   [alt="logo"] {
     width: 100px;
-    height: 100px;
+    transform: scale(0.9);
   }
 }
 
