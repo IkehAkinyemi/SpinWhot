@@ -1,6 +1,7 @@
 import React from "react";
 import "./DashBoard.scss";
 import logo from "../../assets/spinWhotlogo.png";
+import FirstPickedCardContent from "./displayFirstCard/FirstPickedCard";
 
 const DashBoard = (props) => {
   let { backCardContent } = props.playerGuess;
@@ -13,40 +14,8 @@ const DashBoard = (props) => {
         <div className="first-player container">
           <p className="first-player__name">1st Player</p>
 
-          <div
-            className="flip-card-back"
-            className="guessedImage"
-            style={
-              backCardContent === null || backCardContent === undefined
-                ? { display: "none" }
-                : { display: "block" }
-            }
-          >
-            <p className="fact-content">
-              {backCardContent === null || backCardContent === undefined
-                ? null
-                : props.whichPlayerToUpdate
-                ? backCardContent.firstElementChild.textContent
-                : null}
-            </p>
-            <p className="hint">
-              {props.whichPlayerToUpdate
-                ? "Guess a card with the same content"
-                : null}
-            </p>
-          </div>
-
-          <p
-            className="helper"
-            style={
-              backCardContent === null || backCardContent === undefined
-                ? { display: "none" }
-                : { display: "block" }
-            }
-          >
-            Your first guessed card.
-          </p>
-
+          <FirstPickedCardContent  backCardContent={backCardContent} whichPlayerToUpdate={props.whichPlayerToUpdate}/>
+          
           <p className="first-player__score-board">
             Score:{" "}
             <span className="first-player__score-figure">
@@ -58,39 +27,7 @@ const DashBoard = (props) => {
         <div className="second-player container">
           <p className="second-player__name">2nd Player</p>
 
-          <div
-            className="flip-card-back"
-            className="guessedImage"
-            style={
-              backCardContent === null || backCardContent === undefined
-                ? { display: "none" }
-                : { display: "block" }
-            }
-          >
-            <p className="fact-content">
-              {backCardContent === null || backCardContent === undefined
-                ? null
-                : !props.whichPlayerToUpdate
-                ? backCardContent.firstElementChild.textContent
-                : null}
-            </p>
-            <p className="hint">
-              {!props.whichPlayerToUpdate
-                ? "Guess a card with the same content"
-                : null}
-            </p>
-          </div>
-
-          <p
-            className="helper"
-            style={
-              backCardContent === null || backCardContent === undefined
-                ? { display: "none" }
-                : { display: "block" }
-            }
-          >
-            Your first guessed card.
-          </p>
+          <FirstPickedCardContent  backCardContent={backCardContent} whichPlayerToUpdate={props.whichPlayerToUpdate}/>
 
           <p className="second-player__score-board">
             Score:{" "}
@@ -106,7 +43,7 @@ const DashBoard = (props) => {
         </div>
 
         <div className="welcome-intro hashnode-docs">
-          <a href="#">Read more about SpinWhot on Hashnode</a>
+          <a href="https://hashnode.com/draft/601f15d8636acc2a3822ed4f">Read more about SpinWhot on Hashnode</a>
         </div>
       </div>
     </div>
